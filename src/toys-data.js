@@ -1,5 +1,10 @@
-{
-  "toys": [
+const TOYS = [
+    {
+      "id": 1,
+      "name": "Woody",
+      "image": "http://www.pngmart.com/files/3/Toy-Story-Woody-PNG-Photos.png",
+      "likes": 5
+    },
     {
       "id": 2,
       "name": "Buzz Lightyear",
@@ -41,17 +46,5 @@
       "name": "Little Green Men",
       "image": "http://www.pngmart.com/files/3/Toy-Story-Alien-PNG-File.png",
       "likes": -2
-    },
-    {
-      "name": "test",
-      "likes": 0,
-      "id": 9
-    },
-    {
-      "name": "test",
-      "image": "test",
-      "likes": 5,
-      "id": 10
     }
   ]
-}
