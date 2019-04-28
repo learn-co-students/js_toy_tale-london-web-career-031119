@@ -25,15 +25,21 @@ const renderToy = (toy) => {
     <img src=${toy.image} class="toy-avatar" />
     <p class="likes">${toy.likes} Likes </p>
     <button class="like-btn">Like <3</button>
+    <button class="delete-btn">Delete :(</button>
  `
-
- const btnEl = divEl.querySelector(".like-btn")
  const pEl = divEl.querySelector(".likes")
+ const likeBtn = divEl.querySelector(".like-btn")
+ const deleteBtn = divEl.querySelector(".delete-btn")
 
- btnEl.addEventListener('click', () => {
+ likeBtn.addEventListener('click', () => {
    toy.likes++
    increaseLikes(toy)
    pEl.innerText = `${toy.likes} Likes`
+ })
+
+ deleteBtn.addEventListener('click', () => {
+   deleteToy(toy)
+   .then(divEl.remove())
  })
 
  toyCollection.append(divEl)

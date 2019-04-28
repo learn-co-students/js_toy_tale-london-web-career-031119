@@ -17,3 +17,9 @@ const createToy = (toy) =>
     body: JSON.stringify(toy)
   })
   .then(resp => resp.json())
+
+const deleteToy = (toy) =>
+fetch(`http://localhost:3000/toys/${toy.id}`, {
+  method: 'DELETE'
+})
+  .then(resp => resp.json())
